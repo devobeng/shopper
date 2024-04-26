@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-import Reveiws from './ReviewsModel';
+//import Reveiws from './ReviewsModel';
 const productSchema = mongoose.Schema(
 	{
 		user: {
@@ -27,7 +27,7 @@ const productSchema = mongoose.Schema(
 			type: String,
 			required: [true, 'Add description'],
 		},
-		reviews: [Reveiws],
+		//reviews: [Reveiws],
 		rating: {
 			type: Number,
 			required: [true, 'Please add rating'],

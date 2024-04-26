@@ -6,14 +6,15 @@ import Product from '../components/Product';
 
 const HomeScreen = () => {
 	const [products, setProducts] = useState([]);
-	const fetchProduct = async () => {
-		const { data } = await axios.get('/products');
-		setProducts(data);
-	};
+
 	useEffect(() => {
+		const fetchProduct = async () => {
+			const { data } = await axios.get('/products');
+			setProducts(data);
+		};
 		fetchProduct();
 	}, []);
-
+	console.log(products);
 	return (
 		<>
 			<h1>Latest Products</h1>
